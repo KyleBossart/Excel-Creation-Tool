@@ -1,3 +1,3 @@
 # ExcelCreationTool
 
-Asset importing tool.
+Asset importing tool utilizing python and xlsxwriter library.
