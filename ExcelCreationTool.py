@@ -1,7 +1,7 @@
 import random
 import xlsxwriter
 import datetime
-
+#cmd: pip3 install xlsxwriter
 
 def main():
 
