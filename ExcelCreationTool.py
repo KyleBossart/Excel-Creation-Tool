@@ -1,5 +1,4 @@
 import random
-from tkinter.font import BOLD
 import xlsxwriter
 import datetime
 #cmd: pip3 install xlsxwriter
@@ -46,7 +45,7 @@ def main():
 
     # Format for all cells in header.
     headerFormat = workbook.add_format()
-    headerFormat.set_font(BOLD)
+    headerFormat.set_bold(True)
     headerFormat.set_text_wrap()
     headerFormat.set_align("left")
 
@@ -74,7 +73,7 @@ def main():
     worksheet.write("L1", "Expected Replacement Date", headerFormat) # Default is "1/1/2026"
     worksheet.write("M1", "External ID", headerFormat) # Same as Serial Number and Service Tag
     worksheet.write("N1", "Notes", headerFormat) # Not Used
-    worksheet.write("O1", "Last Inventoried On", headerFormat) # Use todays date in format "1/1/2022"
+    worksheet.write("O1", "Last Inventoried On", headerFormat) # Use todays date in format 1/1/2022
     worksheet.write("P1", "Federal Capital #", headerFormat)  # Not Used
     worksheet.write("Q1", "Justification", headerFormat) # Not Used
     worksheet.write("R1", "PO Number", headerFormat) # Not Used
