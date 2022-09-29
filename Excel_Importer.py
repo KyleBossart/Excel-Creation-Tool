@@ -66,7 +66,7 @@ def main():
 
     # Creates formatted date variable.
     todaysDate = datetime.datetime.now()
-    full_date = todaysDate.strftime("%b-%d-%G-%f")
+    full_date = todaysDate.strftime("%b-%d-%G")
     last_inventory_date = todaysDate.strftime("%x")
     
     # Creates Excel file with name and date as the title.
@@ -81,7 +81,7 @@ def main():
 
      
     # Creates Excel workbook. In file path, use "\" for Windows, "/" for *nix.
-    workbook = xlsxwriter.Workbook(f"Test Sheets\{workbookName}.xlsx")
+    workbook = xlsxwriter.Workbook(f"{workbookName}.xlsx")
     
     # Takes input from users, splits by whitespace, then creates list of split items.
     serials_list = list(map(str, (serials).split()))
